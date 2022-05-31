@@ -4,8 +4,8 @@ import ProductReducer from "@/redux/slices/productSlice";
 
 export const store = configureStore({
   reducer: {
-    profiles: ProfileReducer,
-    products: ProductReducer,
+    storeProfiles: ProfileReducer,
+    storeProducts: ProductReducer,
   },
 });
 
