@@ -33,7 +33,7 @@ export default function Home() {
         {products.length !== 0
           ? products.map((eachProduct) => {
               return (
-                <div key={eachProduct.id}>
+                <div key={v4()}>
                   <p>{eachProduct.name}</p>
                   <p>{eachProduct.origin}</p>
                   <p>{eachProduct.price}$</p>
@@ -66,7 +66,7 @@ export default function Home() {
         {profiles.length !== 0
           ? profiles?.map((eachProfile) => {
               return (
-                <div key={eachProfile.id}>
+                <div key={v4()}>
                   <p>{eachProfile.name}</p>
                   <p>{eachProfile.age}</p>
                   <p>{eachProfile.country}$</p>
