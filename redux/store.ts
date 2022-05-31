@@ -1,12 +1,13 @@
 import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers } from "@reduxjs/toolkit";
 import ProfileReducer from "@/redux/slices/profileSlice";
 import ProductReducer from "@/redux/slices/productSlice";
 
 export const store = configureStore({
-  reducer: {
+  reducer: combineReducers({
     storeProfiles: ProfileReducer,
     storeProducts: ProductReducer,
-  },
+  }),
 });
 
 export type RootState = ReturnType<typeof store.getState>;
