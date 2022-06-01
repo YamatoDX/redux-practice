@@ -19,7 +19,7 @@ export default function Home() {
         <button
           onClick={() => {
             const newProductObject = {
-              id: parseInt(Math.random().toString()),
+              id: Math.random(),
               name: v4().slice(0, 10),
               origin: v4().slice(0, 10),
               expiryDate: parseInt(Math.random().toString()),
@@ -33,7 +33,8 @@ export default function Home() {
         {products.length !== 0
           ? products.map((eachProduct) => {
               return (
-                <div key={v4()}>
+                <div key={eachProduct.id}>
+                  <p>{eachProduct.id}</p>
                   <p>{eachProduct.name}</p>
                   <p>{eachProduct.origin}</p>
                   <p>{eachProduct.price}$</p>
@@ -52,7 +53,7 @@ export default function Home() {
         <button
           onClick={() => {
             const newProfileObject = {
-              id: parseInt(Math.random().toString()),
+              id: Math.random(),
               name: v4().slice(0, 10),
               age: parseInt(Math.random().toString()),
               profession: v4().slice(0, 10),
@@ -66,7 +67,8 @@ export default function Home() {
         {profiles.length !== 0
           ? profiles?.map((eachProfile) => {
               return (
-                <div key={v4()}>
+                <div key={eachProfile.id}>
+                  <p>{eachProfile.id}</p>
                   <p>{eachProfile.name}</p>
                   <p>{eachProfile.age}</p>
                   <p>{eachProfile.country}$</p>
